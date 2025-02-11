@@ -1,0 +1,123 @@
+/* General Body Styling */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background-image: url("calming pic.webp");
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    transition: background 1.2s, color 0.4s;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #1e1e1e;
+    color: white;
+}
+
+.dark-mode .main {
+    background: rgba(50, 50, 50, 0.8);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.dark-mode .control-buttons button,
+.dark-mode .set-task-button,
+.dark-mode .dark-mode-toggle {
+    background: linear-gradient(135deg, #444, #222);
+}
+
+/* Dark Mode Toggle Button */
+#theme-toggle {
+    background: linear-gradient(135deg, #444, #222);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease, background 0.3s;
+    margin-bottom: 15px;
+}
+
+#theme-toggle:hover {
+    background: linear-gradient(135deg, #222, #444);
+    transform: scale(1.05);
+}
+
+/* Main Timer Box */
+.main {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    padding: 25px;
+    width: 320px;
+    text-align: center;
+    backdrop-filter: blur(15px);
+}
+
+/* Timer Circle */
+.timer-circle {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Buttons */
+.control-buttons button,
+#set-task {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease, background 0.3s;
+    margin: 5px;
+}
+
+.control-buttons button:hover,
+#set-task:hover {
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    transform: scale(1.05);
+}
+
+/* Progress Circle Animation */
+#progress-circle {
+    transition: stroke-dashoffset 1s linear;
+}
+
+/* Task Input */
+.task-container {
+    box-shadow: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#task-input {    
+    background: linear-gradient(135deg, #444, #222);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 250px;
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 400px) {
+    .main {
+        width: 90%;
+    }
+    
+    #task-input {
+        width: 80%;
+    }
+}

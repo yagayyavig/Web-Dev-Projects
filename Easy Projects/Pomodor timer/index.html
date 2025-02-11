@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <button id="theme-toggle" class="dark-mode-toggle">Toggle Dark Mode</button>
+
+    <h1>Pomodoro Timer</h1>
+
+    <div class="task-container">
+        <input type="text" id="task-input" placeholder="Enter your task...">
+        <button id="set-task" onclick="addTask()">Set Task</button>
+        <p id="current-task"></p>
+    </div>
+
+    <div class="main">
+        <svg width="200" height="200" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="90" stroke="#3498db" stroke-width="8" fill="none"/>
+            <circle id="progress-circle" cx="100" cy="100" r="90" stroke="#ff0000" stroke-width="8" fill="none" stroke-dasharray="565.48" stroke-dashoffset="565.48"/>
+        </svg>
+
+        <div class="timer-circle" id="timer">15:00</div>
+        <p>Sessions Completed: <span id="session-count">0</span></p>
+
+        <div class="control-buttons">
+            <button id="pause-resume" onclick="togglePauseResume()">Pause</button>
+            <button id="restart" onclick="restartTimer()">Restart</button>
+            <button id="choose-time" onclick="chooseTime()">Choose Time</button>
+        </div>
+    </div>
+
+    <!-- Alarm Sound -->
+    <audio id="alarm" src="alarm.mp3"></audio>
+
+    <script src="index.js"></script>
 </body>
 </html>
